@@ -11,6 +11,8 @@ html {
   font-size: 16px;
   font-family: $main-font;
   scroll-behavior: smooth;
+
+  background: rgba($color: lightblue, $alpha: 0.15);
 }
 
 ul {
@@ -49,4 +51,13 @@ button:hover {
   color: $main-color;
   transition: 0.3s ease-out;
   padding-bottom: 5px;
+}
+
+.container {
+  background: rgba($color: lightgrey, $alpha: 0.5);
+  &__wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
 }

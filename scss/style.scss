@@ -8,6 +8,11 @@
   width: 100%;
   background: rgba($color: #fff, $alpha: 0.5);
   z-index: 1000;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   &__menu {
     display: flex;
     justify-content: flex-end;
@@ -27,12 +32,20 @@
   }
 }
 
-.container {
-  background: rgba($color: lightgrey, $alpha: 0.5);
-  &__wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+.social {
+  &__list {
+    display: flex;
+    align-items: center;
+    &-item {
+      margin-left: 30px;
+      font-size: 30px;
+      i {
+        transition: 0.2s;
+        &:hover {
+          color: $main-color;
+        }
+      }
+    }
   }
 }
 
@@ -73,95 +86,6 @@
     }
   }
 }
-
-// .hero {
-//   position: relative;
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   &__text {
-//     position: relative;
-//     margin: auto 0;
-//     &-title {
-//       margin-bottom: 1rem;
-//       font-size: 32px;
-//       font-weight: $font-bold;
-//     }
-//     &-subtitle {
-//       display: block;
-//       margin-bottom: 2rem;
-//       margin-right: 6rem;
-//       padding-left: 10px;
-//       padding: 5px 0 5px 10px;
-//       border-left: 2px solid $main-color;
-//       line-height: 20px;
-//     }
-//     &-btn {
-//       display: inline-block;
-//     }
-//     &-down {
-//       display: block;
-//       span {
-//         position: absolute;
-//         bottom: -100px;
-//         left: 10px;
-//         display: block;
-//         transform: translateX(-50%) rotate(-90deg);
-//       }
-//       i {
-//         position: absolute;
-//         bottom: -170px;
-//         left: 3.5px;
-//       }
-//     }
-//   }
-//   &__image {
-//     height: 735px;
-//     position: relative;
-//     img {
-//       max-height: 675px;
-//       width: 450px;
-//       display: block;
-//       object-fit: cover;
-//     }
-//     &-icons {
-//       ul {
-//         position: absolute;
-//         display: flex;
-//         bottom: 20%;
-//         left: -15%;
-//         li {
-//           margin: auto;
-//           a {
-//             display: block;
-//             padding: 25px 25px;
-//             font-size: 20px;
-//             background: #fff;
-//             transition: 0.4s ease;
-//           }
-//           :hover {
-//             background: $main-color;
-//             i {
-//               color: #fff;
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-//   &__backText {
-//     span {
-//       color: rgba($color: #444444, $alpha: 0.1);
-//       text-transform: uppercase;
-//       font-weight: $font-bold;
-//       font-size: 156px;
-//     }
-//     z-index: -1;
-//     position: absolute;
-//     bottom: 17%;
-//     left: 20%;
-//   }
-// }
 
 .section {
   position: relative;

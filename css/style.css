@@ -37,6 +37,7 @@ html {
   font-size: 16px;
   font-family: "Raleway";
   scroll-behavior: smooth;
+  background: rgba(173, 216, 230, 0.15);
 }
 
 ul {
@@ -77,12 +78,26 @@ button:hover {
   padding-bottom: 5px;
 }
 
+.container {
+  background: rgba(211, 211, 211, 0.5);
+}
+.container__wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
 .header {
   position: fixed;
   top: 0;
   width: 100%;
   background: rgba(255, 255, 255, 0.5);
   z-index: 1000;
+}
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .header__menu {
   display: flex;
@@ -102,13 +117,19 @@ button:hover {
   opacity: 0.8;
 }
 
-.container {
-  background: rgba(211, 211, 211, 0.5);
+.social__list {
+  display: flex;
+  align-items: center;
 }
-.container__wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
+.social__list-item {
+  margin-left: 30px;
+  font-size: 30px;
+}
+.social__list-item i {
+  transition: 0.2s;
+}
+.social__list-item i:hover {
+  color: #f16856;
 }
 
 .hero {
