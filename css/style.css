@@ -126,7 +126,7 @@ button:hover {
   font-size: 30px;
 }
 .social__list-item i {
-  transition: 0.2s;
+  transition: 0.21s;
 }
 .social__list-item i:hover {
   color: #f16856;
