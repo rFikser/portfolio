@@ -134,7 +134,6 @@ button:hover {
 
 .hero {
   position: relative;
-  background: url(../img/bg-hero.jpg) no-repeat center center/cover;
   min-height: 100vh;
 }
 .hero_wrapper {
