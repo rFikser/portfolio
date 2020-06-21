@@ -132,6 +132,11 @@ button:hover {
   color: #f16856;
 }
 
+.parallax-window {
+  width: 100%;
+  object-fit: cover;
+}
+
 .hero {
   position: relative;
   min-height: 100vh;
@@ -234,12 +239,15 @@ button:hover {
   margin: 20px 0;
 }
 .aboutMe-skills {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   padding-top: 16px;
   padding-bottom: 16px;
 }
 .aboutMe-skills span {
-  display: inline-block;
   margin-right: 10px;
+  margin-bottom: 10px;
   padding: 10px 16px;
   font-size: 14px;
   letter-spacing: 0.05rem;
@@ -334,6 +342,131 @@ button:hover {
 
 li.active a {
   color: #f16856;
+}
+
+@media (max-width: 1150px) {
+  .aboutMe-skills span {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 1024px) {
+  .portfolio__left-title {
+    display: none;
+  }
+
+  .section-title h2 {
+    font-size: 125px;
+    width: 501px;
+    color: rgba(68, 68, 68, 0.1);
+    text-transform: uppercase;
+    z-index: -10;
+  }
+
+  .aboutMe__wrapper {
+    flex-direction: column;
+  }
+  .aboutMe__left-title {
+    position: absolute;
+    left: 30%;
+    bottom: 300px;
+  }
+  .aboutMe-skills {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .aboutMe-skills span {
+    margin-bottom: 10px;
+    flex: -1 0 33%;
+  }
+
+  .work-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  .card {
+    position: relative;
+    height: 275px;
+    margin-bottom: 60px;
+    transition: 0;
+  }
+  .card-container img {
+    opacity: 1;
+    transition: 0;
+    backface-visibility: visible;
+  }
+  .card-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    translate: 0;
+    opacity: 1;
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: translate(0, 0);
+    padding: 10px;
+  }
+  .card-content p {
+    display: none;
+  }
+  .card-content a {
+    display: block;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    width: 40%;
+  }
+  .card:hover {
+    transform: none;
+  }
+  .card:hover .card-container {
+    z-index: -2;
+    background: none;
+  }
+  .card:hover img {
+    opacity: 1;
+  }
+
+  .header__menu-item {
+    margin-right: 20px;
+  }
+  .header-btn {
+    margin-right: 20px;
+  }
+
+  .social__list-item {
+    margin-left: 20px;
+    font-size: 25px;
+  }
+}
+@media (max-width: 620px) {
+  .section-title h2 {
+    font-size: 60px;
+    width: 501px;
+    color: rgba(68, 68, 68, 0.1);
+    text-transform: uppercase;
+    z-index: -10;
+  }
+
+  .aboutMe__left-title {
+    position: absolute;
+    left: 20%;
+    bottom: 350px;
+  }
+
+  .header-btn {
+    margin-right: 20px;
+  }
+  .header__menu-item {
+    margin-right: 10px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

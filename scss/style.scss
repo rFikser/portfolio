@@ -1,6 +1,6 @@
+@import "media";
 @import "common";
 @import "variables";
-@import "media";
 
 .header {
   position: fixed;
@@ -47,6 +47,11 @@
       }
     }
   }
+}
+
+.parallax-window {
+  width: 100%;
+  object-fit: cover;
 }
 
 .hero {
@@ -153,11 +158,14 @@
     margin: 20px 0;
   }
   &-skills {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     padding-top: 16px;
     padding-bottom: 16px;
     span {
-      display: inline-block;
       margin-right: 10px;
+      margin-bottom: 10px;
       padding: 10px 16px;
       font-size: 14px;
       letter-spacing: 0.05rem;
@@ -256,4 +264,165 @@
 
 li.active a {
   color: $main-color;
+}
+
+// MEDIA QUERIES
+
+@media (max-width: 1150px) {
+  .aboutMe {
+    &-skills {
+      span {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .portfolio {
+    &__left-title {
+      display: none;
+    }
+  }
+
+  .section {
+    &-title {
+      h2 {
+        font-size: 125px;
+        width: 501px;
+        color: rgba($color: #444, $alpha: 0.1);
+        text-transform: uppercase;
+        z-index: -10;
+      }
+    }
+  }
+
+  .aboutMe {
+    &__wrapper {
+      flex-direction: column;
+    }
+    &__left-title {
+      position: absolute;
+      left: 30%;
+      bottom: 300px;
+    }
+    &-skills {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-start;
+      span {
+        margin-bottom: 10px;
+        flex: -1 0 33%;
+      }
+    }
+  }
+
+  .work-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  .card {
+    position: relative;
+    height: 275px;
+    margin-bottom: 60px;
+    transition: 0;
+    &-container {
+      img {
+        opacity: 1;
+        transition: 0;
+        backface-visibility: visible;
+      }
+    }
+    &-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+      translate: 0;
+      opacity: 1;
+      position: relative;
+      left: 0;
+      top: 0;
+      transform: translate(0, 0);
+      padding: 10px;
+      p {
+        display: none;
+      }
+      a {
+        display: block;
+        margin-bottom: 5px;
+        margin-right: 10px;
+        width: 40%;
+      }
+    }
+    &:hover {
+      transform: none;
+      .card-container {
+        z-index: -2;
+        background: none;
+      }
+      img {
+        opacity: 1;
+      }
+    }
+  }
+
+  .header {
+    &__menu {
+      &-item {
+        margin-right: 20px;
+      }
+    }
+    &-btn {
+      margin-right: 20px;
+    }
+  }
+
+  .social {
+    &__list {
+      &-item {
+        margin-left: 20px;
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .section {
+    &-title {
+      h2 {
+        font-size: 60px;
+        width: 501px;
+        color: rgba($color: #444, $alpha: 0.1);
+        text-transform: uppercase;
+        z-index: -10;
+      }
+    }
+  }
+
+  .aboutMe {
+    &__left-title {
+      position: absolute;
+      left: 20%;
+      bottom: 350px;
+    }
+  }
+
+  .header {
+    &-btn {
+      margin-right: 20px;
+    }
+    &__menu {
+      &-item {
+        margin-right: 10px;
+      }
+    }
+  }
 }
