@@ -468,5 +468,14 @@ li.active a {
     margin-right: 10px;
   }
 }
+@media (max-width: 500px) {
+  .work-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 10px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
