@@ -479,7 +479,7 @@ li.active a {
 
   html,
 body {
-    width: 100vh;
+    background: #fff;
   }
 
   .container__wrapper {
