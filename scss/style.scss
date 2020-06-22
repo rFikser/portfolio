@@ -437,6 +437,7 @@ li.active a {
   }
 
   .container {
+    width: 100vh;
     &__wrapper {
       min-width: 320px;
     }
