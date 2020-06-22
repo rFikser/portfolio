@@ -84,7 +84,7 @@ button:hover {
 .container__wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 20px;
 }
 
 .header {
@@ -475,6 +475,26 @@ li.active a {
     grid-template-rows: repeat(6, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 10px;
+  }
+
+  .container__wrapper {
+    min-width: 320px;
+  }
+
+  .page-section {
+    margin-top: 50px;
+  }
+
+  .hero {
+    width: 100vh;
+  }
+
+  .aboutMe {
+    width: 100vh;
+  }
+
+  .portfolio {
+    width: 100vh;
   }
 }
 

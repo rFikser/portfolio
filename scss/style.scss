@@ -435,4 +435,25 @@ li.active a {
     grid-column-gap: 0px;
     grid-row-gap: 10px;
   }
+
+  .container {
+    &__wrapper {
+      min-width: 320px;
+    }
+  }
+
+  .page-section {
+    margin-top: 50px;
+  }
+
+  .hero {
+    width: 100vh;
+  }
+  .aboutMe {
+    width: 100vh;
+  }
+
+  .portfolio {
+    width: 100vh;
+  }
 }
