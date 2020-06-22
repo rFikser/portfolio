@@ -477,9 +477,11 @@ li.active a {
     grid-row-gap: 10px;
   }
 
-  .container {
+  html,
+body {
     width: 100vh;
   }
+
   .container__wrapper {
     min-width: 320px;
   }
