@@ -268,7 +268,7 @@ li.active a {
 
 // MEDIA QUERIES
 
-@media (max-width: 1150px) {
+@media screen and (max-width: 1150px) {
   .aboutMe {
     &-skills {
       span {
@@ -278,7 +278,7 @@ li.active a {
   }
 }
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .portfolio {
     &__left-title {
       display: none;
@@ -394,7 +394,7 @@ li.active a {
   }
 }
 
-@media (max-width: 620px) {
+@media screen and (max-width: 620px) {
   .section {
     &-title {
       h2 {
@@ -427,7 +427,11 @@ li.active a {
   }
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
+  .parallax-window {
+    background: url(../img/bg-hero.jpg) no-repeat center center/cover;
+  }
+
   .work-cards {
     display: grid;
     grid-template-columns: 1fr;
@@ -439,12 +443,6 @@ li.active a {
   html,
   body {
     background: #fff;
-  }
-
-  .container {
-    &__wrapper {
-      min-width: 320px;
-    }
   }
 
   .page-section {

@@ -1,7 +1,7 @@
 // text type animation
 
 var typed = new Typed(".typed", {
-  strings: ["I'm Junior Frontend Developer", "I love to create"],
+  strings: ["I'm a frontend developer", "I love to create"],
   typeSpeed: 50,
   loop: true,
   loopCount: Infinity,
